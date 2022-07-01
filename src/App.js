@@ -9,7 +9,7 @@ const getData = async () => {
     console.error(error);
   }
 }
-
+// https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}&lang=eng
 function App() {
   const [datos, setData] = useState([]);
   const fetchData = async () => {
@@ -29,7 +29,7 @@ function App() {
   return (
     <>
     <header>
-      <h1>Tiempo en el mundo</h1>
+      <h1>Weather-World-API</h1>
       </header>
     </>
   );}
