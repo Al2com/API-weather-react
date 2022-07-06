@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 
-const rendericons = function (icon) {
-  { datos.data[0].weather.icon.array.forEach(icon => {
-    return ${""} ===
-  })
+// const rendericons = function (icon) {
+//   { datos.data[0].weather.icon.array.forEach(icon => {
+//     return ${""} ===
+//   })
 
 
   
-}
+// }
     
 
 
