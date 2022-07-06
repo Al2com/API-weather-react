@@ -1,4 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react"
+
+const rendericons = function (icon) {
+  { datos.data[0].weather.icon.array.forEach(icon => {
+    return ${""} ===
+  })
+
+
+  
+}
+    
+
 
 const getData = async (search) => {
   try {
@@ -6,7 +17,7 @@ const getData = async (search) => {
       `https://api.weatherbit.io/v2.0/forecast/daily?city=${search}&key=6e266f9ea6524f13857716617f889692`
     );
     const datos = await response.json();
-    return datos;
+    return datos
   } catch (error) {
     console.error(error);
   }
@@ -30,6 +41,10 @@ function App() {
   };
 
   const shouldRender = Object.entries(datos).length > 0;
+  
+
+
+
 
   return (
     <>
@@ -37,15 +52,19 @@ function App() {
         <h1>Weather-World-API</h1>
 
         <form onSubmit={handleOnSubmit}>
-          <label htmlFor="search">Busqueda por ciudad:</label>
+          <label htmlFor="search">Elige una ciudad:</label>
           <input type="search" name="search" id="search" />
-          <button type="submit">Busqueda</button>
+          <button type="submit">Buscar</button>
         </form>
       </header>
       <main>
         {shouldRender ? (
           <>
-            <h2>Ciudad: {datos.city_name}</h2>
+            <h1>Ciudad: {datos.city_name}</h1>
+            <dl>
+              {/* <dd>{datos.data[0].weather.${icon}}</dd> */}
+            </dl>
+
             <dl>
               <dt>Temperatura</dt>
               <dd>{datos.data[0].temp}</dd>
@@ -60,3 +79,7 @@ function App() {
 }
 
 export default App;
+// `${datos.data[0].weather.icon}`png; <img src="${datos.data[0].weather.icon.png}" alt=""/>
+// hacer una funcion que compare o comvierta los numeros en imagen para que se vean los iconos 
+// poner esta parte de la app dentro del nav y crear otra 
+//hacer test

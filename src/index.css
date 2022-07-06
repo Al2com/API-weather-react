@@ -6,5 +6,10 @@ html {
 }
 body{
   font-family: sans-serif;
+  background-color: aquamarine;
 }
+label{
+  font-weight: 900;
+}
+
 
