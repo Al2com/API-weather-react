@@ -66,7 +66,7 @@ function App() {
 
             <dl>
               <dt>Temperatura</dt>
-              <dd>{datos.data[0].temp}</dd>
+              <dd>{datos.data[0].temp} ºC</dd>
             </dl>
           </>
         ) : (
