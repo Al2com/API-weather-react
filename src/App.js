@@ -61,9 +61,8 @@ function App() {
         {shouldRender ? (
           <>
             <h1>Ciudad: {datos.city_name}</h1>
-            <dl>
-              {/* <dd>{datos.data[0].weather.${icon}}</dd> */}
-            </dl>
+
+            <img src={`./assets/icons/${datos.data[0].weather.icon}.png`}alt=""></img>
 
             <dl>
               <dt>Temperatura</dt>
