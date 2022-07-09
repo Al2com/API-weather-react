@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from './components/Header';
+import Nav from "./components/Nav";
 
 
 const getData = async (search) => {
@@ -40,20 +41,13 @@ function App() {
   return (
     <>
       <Header />
-    
-      <nav>
-        <form onSubmit={handleOnSubmit}>
-          <label htmlFor="search">Elige una ciudad:</label>
-          <input type="search" name="search" id="search" />
-          <button type="submit">Buscar</button>
-        </form>
-      </nav>
+      <Nav handleOnSubmit={handleOnSubmit} />
 
       <main>
         {shouldRender ? (
           <>
             <h1>Ciudad: {datos.city_name}</h1>
-
+ 
             <img
               src={`./assets/icons/${datos.data[0].weather.icon}.png`}
               alt=""
