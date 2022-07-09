@@ -1,14 +1,5 @@
-import React, { useState } from "react"
-
-// const rendericons = function (icon) {
-//   { datos.data[0].weather.icon.array.forEach(icon => {
-//     return ${""} ===
-//   })
-
-
-  
-// }
-    
+import React, { useState } from "react";
+import Header from './components/Header';
 
 
 const getData = async (search) => {
@@ -48,25 +39,30 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>Weather-World-API</h1>
-
+      <Header />
+    
+      <nav>
         <form onSubmit={handleOnSubmit}>
           <label htmlFor="search">Elige una ciudad:</label>
           <input type="search" name="search" id="search" />
           <button type="submit">Buscar</button>
         </form>
-      </header>
+      </nav>
+
       <main>
         {shouldRender ? (
           <>
             <h1>Ciudad: {datos.city_name}</h1>
 
-            <img src={`./assets/icons/${datos.data[0].weather.icon}.png`}alt=""></img>
+            <img
+              src={`./assets/icons/${datos.data[0].weather.icon}.png`}
+              alt=""
+            ></img>
 
             <dl>
               <dt>Temperatura</dt>
               <dd>{datos.data[0].temp} ºC</dd>
+              <dd>{datos.data[0].datetime}</dd>
             </dl>
           </>
         ) : (
