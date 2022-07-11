@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Header from './components/Header';
 import Nav from "./components/Nav";
+import Main from "./components/Main";
+
+
 
 
 const getData = async (search) => {
@@ -35,34 +38,14 @@ function App() {
   const shouldRender = Object.entries(datos).length > 0;
   
 
-
+ 
 
 
   return (
     <>
       <Header />
       <Nav handleOnSubmit={handleOnSubmit} />
-
-      <main>
-        {shouldRender ? (
-          <>
-            <h1>Ciudad: {datos.city_name}</h1>
- 
-            <img
-              src={`./assets/icons/${datos.data[0].weather.icon}.png`}
-              alt=""
-            ></img>
-
-            <dl>
-              <dt>Temperatura</dt>
-              <dd>{datos.data[0].temp} ºC</dd>
-              <dd>{datos.data[0].datetime}</dd>
-            </dl>
-          </>
-        ) : (
-          <h2>no hay data</h2>
-        )}
-      </main>
+      <Main shouldRender={shouldRender} />
     </>
   );
 }
