@@ -36,7 +36,7 @@ function App() {
   };
 
   // const shouldRender = Object.entries(datos).length > 0;
-  
+  // podemos omitir shoulRender si pasamos el object.entries(datos).length > 0 directamente al componente Main asi nos evitamos que no reconozca la constante   
 
  
 
@@ -46,6 +46,7 @@ function App() {
       <Header />
       <Nav handleOnSubmit={handleOnSubmit} />
       <Main dato={datos} />
+      {/* pasamos los datos al main que esta componetizado el valor data podria ser otro */}
     </>
   );
 }
