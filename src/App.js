@@ -45,7 +45,7 @@ function App() {
     <>
       <Header />
       <Nav handleOnSubmit={handleOnSubmit} />
-      <Main shouldRender={shouldRender} />
+      <Main handleOnSubmit={setData} />
     </>
   );
 }
