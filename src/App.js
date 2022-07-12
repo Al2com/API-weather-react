@@ -35,7 +35,7 @@ function App() {
     setData(data);
   };
 
-  const shouldRender = Object.entries(datos).length > 0;
+  // const shouldRender = Object.entries(datos).length > 0;
   
 
  
@@ -45,7 +45,7 @@ function App() {
     <>
       <Header />
       <Nav handleOnSubmit={handleOnSubmit} />
-      <Main handleOnSubmit={setData} />
+      <Main dato={datos} />
     </>
   );
 }
