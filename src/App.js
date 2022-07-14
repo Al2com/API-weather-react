@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Header from './components/Header';
 import Nav from "./components/Nav";
 import Main from "./components/Main";
+import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+
+  mapboxgl.accessToken ='pk.eyJ1IjoiYXBpcHJveWVjdG8iLCJhIjoiY2w1aXNxcnlxMDhkcjNjbXhmaWhvN2hqbCJ9.0aI6_p6aaifHHsaCowhM5A';
+
 
 
 
@@ -19,6 +23,7 @@ const getData = async (search) => {
 };
 // https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}&lang=eng
 function App() {
+
   const [datos, setData] = useState([]);
 
   const handleOnSubmit = async (event) => {
@@ -36,8 +41,24 @@ function App() {
   };
 
   // const shouldRender = Object.entries(datos).length > 0;
-  // podemos omitir shoulRender si pasamos el object.entries(datos).length > 0 directamente al componente Main asi nos evitamos que no reconozca la constante   
-
+  // podemos omitir shoulRender si pasamos el object.entries(datos).length > 0 directamente al componente Main asi nos evitamos que no reconozca la constante
+   useEffect(() => {
+     if (map.current) return; // initialize map only once
+     map.current = new mapboxgl.Map({
+       container: mapContainer.current,
+       style: "mapbox://styles/mapbox/streets-v11",
+       center: [lng, lat],
+       zoom: zoom,
+     });
+   });
+  
+  
+  
+   const mapContainer = useRef(null);
+   const map = useRef(null);
+   const [lng, setLng] = useState(-70.9);
+   const [lat, setLat] = useState(42.35);
+   const [zoom, setZoom] = useState(9);
  
 
 
@@ -46,6 +67,9 @@ function App() {
       <Header />
       <Nav handleOnSubmit={handleOnSubmit} />
       <Main dato={datos} />
+      <div>
+        <div ref={mapContainer} className="map-container" />
+      </div>
       {/* pasamos los datos al main que esta componetizado el valor data podria ser otro */}
     </>
   );
