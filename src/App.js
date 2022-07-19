@@ -16,7 +16,9 @@ const getData = async (search) => {
       `https://api.weatherbit.io/v2.0/forecast/daily?city=${search}&key=6e266f9ea6524f13857716617f889692`
     );
     const datos = await response.json();
+    
     return datos
+    
   } catch (error) {
     console.error(error);
   }
@@ -25,6 +27,12 @@ const getData = async (search) => {
 function App() {
 
   const [datos, setData] = useState([]);
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+  const [lng, setLng] = useState(34);
+
+  const [lat, setLat] = useState(22.35);
+  const [zoom, setZoom] = useState(5);
 
   const handleOnSubmit = async (event) => {
     event.preventDefault();
@@ -38,29 +46,44 @@ function App() {
     const searchValue = event.target.search.value;
     const data = await getData(searchValue);
     setData(data);
-  };
+    setLng(data.lon);
+    console.log(lng);
+    setLat(parseFloat(data.lat));
+    {
+      const marker1 = new mapboxgl.Marker()
+        .setLngLat([-0.37739, 39.46975])
+        .addTo(map);
+    }
+  };;
 
   // const shouldRender = Object.entries(datos).length > 0;
   // podemos omitir shoulRender si pasamos el object.entries(datos).length > 0 directamente al componente Main asi nos evitamos que no reconozca la constante
    useEffect(() => {
      if (map.current) return; // initialize map only once
-     map.current = new mapboxgl.Map({
+       map.current = new mapboxgl.Map({
        container: mapContainer.current,
        style: "mapbox://styles/mapbox/streets-v11",
        center: [lng, lat],
        zoom: zoom,
      });
-   });
+   }, [lng]);
+  
+  useEffect(() => {
+    if (datos.length > 0)  {
+      map.current.on("data", () => {
+        map.current.getCenter().lng.toFixed(lng);
+        map.current.getCenter().lat.toFixed(lat);
+      })
+    } 
+  })
   
   
   
-   const mapContainer = useRef(null);
-   const map = useRef(null);
-   const [lng, setLng] = useState(-70.9);
-   const [lat, setLat] = useState(42.35);
-   const [zoom, setZoom] = useState(9);
- 
+   
+  
 
+  
+ 
 
   return (
     <>
@@ -69,7 +92,9 @@ function App() {
       <Main dato={datos} />
       <div>
         <div ref={mapContainer} className="map-container" />
+      
       </div>
+
       {/* pasamos los datos al main que esta componetizado el valor data podria ser otro */}
     </>
   );
