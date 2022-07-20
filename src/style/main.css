@@ -1,0 +1,22 @@
+
+
+.temp{
+  color:black;
+  border: solid 2px green  ;
+  margin:35px;
+  font-weight: 900;
+  font-size: 30px;
+}
+.lon , .lat {
+  font-weight: 600;
+
+}
+h2{
+text-align:center;
+}
+img{
+margin-left: 750px;
+}
+.datemp {
+  text-align: center;
+}

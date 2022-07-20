@@ -7,16 +7,19 @@ const Main = (props) => {
     <main>
       {Object.entries(props.dato).length > 0 ? (
         <>
-          <h2>Ciudad : {props.dato.city_name}  {props.dato.country_code}</h2>
+          <h2>
+            Ciudad : {props.dato.city_name} {props.dato.country_code}
+          </h2>
           <img
             src={`./assets/icons/${props.dato.data[0].weather.icon}.png`}
             alt="imagen"
           ></img>
-          <dl>
-            <dt>Temperatura</dt>
-            <dd>{props.dato.data[0].temp} ºC</dd>
-
-            <dd>{props.dato.lon}</dd>
+          <dl className="datemp">
+            <div class="temp">
+              <dt>Temperatura {props.dato.data[0].temp} ºC </dt>
+            </div>
+              <dd className="lon">Longitud:{props.dato.lat}</dd>
+              <dd className="lat">Latitud{props.dato.lon}</dd>
           </dl>
         </>
       ) : (

@@ -3,10 +3,11 @@
 }
 html {
   font-size: 100%;
+  
 }
 body{
   font-family: sans-serif;
-  background-color: aquamarine;
+  background-color: rgb(181, 191, 226);
 }
 label{
   font-weight: 900;
@@ -29,4 +30,5 @@ left: 0;
 margin: 12px;
 border-radius: 4px;
 }
+
 
