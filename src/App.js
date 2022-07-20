@@ -16,7 +16,8 @@ const getData = async (search) => {
 
     return datos;
   } catch (error) {
-    console.error(error);
+    console.error('error');
+    window.alert("No encuentra nada en nuestra base de datos")
   }
 };
 // https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}&lang=eng
@@ -24,10 +25,10 @@ function App() {
   const [datos, setData] = useState([]);
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(34);
+  const [lng, setLng] = useState(-70.9);
 
-  const [lat, setLat] = useState(22.35);
-  const [zoom, setZoom] = useState(5);
+  const [lat, setLat] = useState(62.35);
+  const [zoom, setZoom] = useState(3);
 
   const handleOnSubmit = async (event) => {
     event.preventDefault();
@@ -52,7 +53,7 @@ function App() {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: "mapbox://styles/mapbox/streets-v11",
       center: [lng, lat],
       zoom: zoom,
     });
