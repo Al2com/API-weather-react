@@ -4,10 +4,11 @@ import Nav from './components/Nav';
 import Main from './components/Main';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
+
 mapboxgl.accessToken =
   'pk.eyJ1IjoiYXBpcHJveWVjdG8iLCJhIjoiY2w1aXNxcnlxMDhkcjNjbXhmaWhvN2hqbCJ9.0aI6_p6aaifHHsaCowhM5A';
 
-const getData = async (search) => {
+async function getData(search) {
   try {
     const response = await fetch(
       `https://api.weatherbit.io/v2.0/forecast/daily?city=${search}&key=6e266f9ea6524f13857716617f889692`,
@@ -19,7 +20,7 @@ const getData = async (search) => {
     console.error('error');
     window.alert("No se encuentran ")
   }
-};
+}
 // https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}&lang=eng
 function App() {
   const [datos, setData] = useState([]);
@@ -41,7 +42,6 @@ function App() {
       // maneja el error
       return;
     }
-
     setData(data);
     setLng(parseFloat(data.lon));
     setLat(parseFloat(data.lat));
@@ -74,9 +74,11 @@ function App() {
     </>
   );
 }
-
+  
+    
 export default App;
 // `${datos.data[0].weather.icon}`png; <img src="${datos.data[0].weather.icon.png}" alt=""/>
 // hacer una funcion que compare o comvierta los numeros en imagen para que se vean los iconos
 // poner esta parte de la app dentro del nav y crear otra
 //hacer test
+
