@@ -17,7 +17,7 @@ const getData = async (search) => {
     return datos;
   } catch (error) {
     console.error('error');
-    window.alert("No encuentra nada en nuestra base de datos")
+    window.alert("No se encuentran ")
   }
 };
 // https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}&lang=eng
@@ -25,10 +25,12 @@ function App() {
   const [datos, setData] = useState([]);
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(-70.9);
 
+  const [lng, setLng] = useState(-70.9);
   const [lat, setLat] = useState(62.35);
   const [zoom, setZoom] = useState(3);
+
+
 
   const handleOnSubmit = async (event) => {
     event.preventDefault();
@@ -63,10 +65,10 @@ function App() {
     <>
       <Header />
       <Nav handleOnSubmit={handleOnSubmit} />
-      <Main dato={datos} />
-      <div>
-        <div ref={mapContainer} className="map-container" />
-      </div>
+      <Main dato={datos} />  
+       <div>
+        <div ref={mapContainer} className="map-container" /> 
+      </div> 
 
       {/* pasamos los datos al main que esta componetizado el valor data podria ser otro */}
     </>

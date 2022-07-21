@@ -2,7 +2,7 @@ import React from "react";
 
 
 const Main = (props) => {
-  console.log(props)
+
   return (
     <main>
       {Object.entries(props.dato).length > 0 ? (
