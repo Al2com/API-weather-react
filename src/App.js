@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Main from './components/Main';
-import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import mapboxgl from 'mapbox-gl';
 
 
 mapboxgl.accessToken =
@@ -45,6 +45,7 @@ function App() {
     setData(data);
     setLng(parseFloat(data.lon));
     setLat(parseFloat(data.lat));
+    setData(parseFloat(setZoom));
 
     map.current.setCenter([data.lon, data.lat]);
   };
