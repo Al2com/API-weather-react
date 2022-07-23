@@ -29,7 +29,7 @@ function App() {
 
   const [lng, setLng] = useState(-70.9);
   const [lat, setLat] = useState(62.35);
-  const [zoom, setZoom] = useState(3);
+  const [zoom, setZoom] = useState(7);
 
 
 
@@ -45,7 +45,7 @@ function App() {
     setData(data);
     setLng(parseFloat(data.lon));
     setLat(parseFloat(data.lat));
-    setData(parseFloat(setZoom));
+    // setData(parseFloat(setZoom));
 
     map.current.setCenter([data.lon, data.lat]);
   };
