@@ -21,7 +21,6 @@ async function getData(search) {
     window.alert("No se encuentran ")
   }
 }
-// https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}&lang=eng
 function App() {
   const [datos, setData] = useState([]);
   const mapContainer = useRef(null);
@@ -77,8 +76,5 @@ function App() {
   
     
 export default App;
-// `${datos.data[0].weather.icon}`png; <img src="${datos.data[0].weather.icon.png}" alt=""/>
-// hacer una funcion que compare o comvierta los numeros en imagen para que se vean los iconos
-// poner esta parte de la app dentro del nav y crear otra
-//hacer test
+
 
