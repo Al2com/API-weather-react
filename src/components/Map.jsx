@@ -12,7 +12,8 @@ return(
 <div>
   <div ref={props.mapContainer} className="map-container" />
   <footer className="footer">
-    <h5>Álvaro Comenge made with ❤ 26/7/22</h5>
+      <h5>Álvaro Comenge made with ❤ 26/7/22</h5>
+      <h6>Proyecto final de curso General Assambly</h6>
   </footer>
 </div>
 
