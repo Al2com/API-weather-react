@@ -8,7 +8,6 @@ const Nav = (props) => {
     <input type="search" name="search" id="search" />
       <button type="submit">Buscar</button>
     </form>
-
   )
 };
 
