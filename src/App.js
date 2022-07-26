@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Main from './components/Main';
-import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import mapboxgl from 'mapbox-gl'; 
 
 
 mapboxgl.accessToken =
@@ -18,7 +18,7 @@ async function getData(search) {
     return datos;
   } catch (error) {
     console.error('error');
-    window.alert("No se encuentran ")
+   
   }
 }
 function App() {
@@ -28,7 +28,7 @@ function App() {
 
   const [lng, setLng] = useState(-70.9);
   const [lat, setLat] = useState(62.35);
-  const [zoom, setZoom] = useState(6);
+  const [zoom, setZoom] = useState(5);
 
 
 
@@ -44,7 +44,7 @@ function App() {
     setData(data);
     setLng(parseFloat(data.lon));
     setLat(parseFloat(data.lat));
-
+   
     map.current.setCenter([data.lon, data.lat]);
   };
 
