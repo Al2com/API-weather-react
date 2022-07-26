@@ -28,7 +28,7 @@ function App() {
 
   const [lng, setLng] = useState(-70.9);
   const [lat, setLat] = useState(62.35);
-  const [zoom, setZoom] = useState(3);
+  const [zoom, setZoom] = useState(6);
 
 
 
@@ -64,10 +64,13 @@ function App() {
     <>
       <Header />
       <Nav handleOnSubmit={handleOnSubmit} />
-      <Main dato={datos} />  
-       <div>
-        <div ref={mapContainer} className="map-container" /> 
-      </div> 
+      <Main dato={datos} />
+      <div>
+        <div ref={mapContainer} className="map-container" />
+        <footer class="footer">
+          <h5>Álvaro Comenge made with ❤ 26/7/22</h5>
+        </footer>
+      </div>
 
       {/* pasamos los datos al main que esta componetizado el valor data podria ser otro */}
     </>

@@ -2,7 +2,6 @@
 
 .temp{
   color:black;
-  border: solid 2px green  ;
   margin:35px;
   font-weight: 900;
   font-size: 30px;
@@ -15,8 +14,15 @@ h2{
 text-align:center;
 }
 img{
-margin-left: 750px;
+margin-left: 850px;
 }
 .datemp {
   text-align: center;
+}
+
+.footer{
+  font-family: sans-serif;
+  font-size: x-small;
+  font-weight: 900;
+  text-align: right;
 }

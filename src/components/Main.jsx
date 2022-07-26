@@ -21,6 +21,8 @@ const Main = (props) => {
               <dd className="lon">Longitud:{props.dato.lat}</dd>
               <dd className="lat">Latitud{props.dato.lon}</dd>
           </dl>
+        
+         
         </>
       ) : (
         <h2>No existen datos de esta localización</h2>
