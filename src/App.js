@@ -2,7 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Main from './components/Main';
-import mapboxgl from 'mapbox-gl'; 
+import Map from "./components/Map";
+import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+
 
 
 mapboxgl.accessToken =
@@ -65,14 +67,9 @@ function App() {
       <Header />
       <Nav handleOnSubmit={handleOnSubmit} />
       <Main dato={datos} />
-      <div>
-        <div ref={mapContainer} className="map-container" />
-        <footer class="footer">
-          <h5>Álvaro Comenge made with ❤ 26/7/22</h5>
-        </footer>
-      </div>
-
       {/* pasamos los datos al main que esta componetizado el valor data podria ser otro */}
+      <Map mapContainer={mapContainer} />
+      {/* Paso mapContainer como mapContainer para que el compoente sepa de el  */}
     </>
   );
 }
