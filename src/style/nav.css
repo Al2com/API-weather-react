@@ -1,9 +1,21 @@
 form {
-  margin-left: 1100px;
+  display: block;
+  text-align: center;
+
+  
  
 }
 
 button {
-  padding: 5px;
-  margin: 20px;
+  display:inline;
+  padding: 2px;
+  margin:10px;
+  background-color: #9999;
+  box-shadow: 2px 2px 5px #999;
+  border-radius: 5px;
+}
+
+label{
+  margin: 5px;
+
 }

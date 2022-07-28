@@ -18,11 +18,9 @@ const Main = (props) => {
             <div class="temp">
               <dt>Temperatura {props.dato.data[0].temp} ºC </dt>
             </div>
-              <dd className="lon">Longitud:{props.dato.lat}</dd>
-              <dd className="lat">Latitud{props.dato.lon}</dd>
+            <h6 className="lon">Lon:{props.dato.lat}</h6>
+            <h6 className="lat">Lat:{props.dato.lon}</h6>
           </dl>
-        
-         
         </>
       ) : (
         <h2>No existen datos de esta localización</h2>
