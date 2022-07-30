@@ -14,7 +14,7 @@ El resultado es el siguiente,
 
 ![Page Scaffolding](/info/assets/Readme_foto1.PNG 'Page scaffolding')
 
-Los mayores dolores de cabeza y problemas que he tenido al realizar este proyecto y que he ido superando son, obtener data mediante el fech, ya que he tenido que leer el manual de la API pública y componetizar en partes por requerimiento del proyecto, quise meter en un componente todo lo referente a la librería de Mapbox y me llevo mucho tiempo pero al final lo resolví. Básicamente entender la manera de trabajar en React es el reto más grande que he encontrado y el funcionamiento de los test.
+Los mayores dolores de cabeza y problemas que he tenido al realizar este proyecto y que he ido superando son, obtener data mediante el fech, ya que he tenido que leer el manual de la API pública y componetizar en partes por requerimiento del proyecto, quise meter en un componente todo lo referente a la librería de Mapbox y me llevo mucho tiempo pero al final lo resolví. Básicamente entender la manera de trabajar en React es el reto más grande que he encontrado y el funcionamiento de los test
 
 
 
