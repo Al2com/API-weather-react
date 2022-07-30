@@ -1,5 +1,5 @@
 import React  from "react";
-import mapboxgl from 'mapbox-gl'; 
+
 
 const Nav = (props) => {
  
