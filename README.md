@@ -1,21 +1,38 @@
-Empece el proyecto dibujando en una del mismo;
-![Page Scaffolding](/info/assets/IMG_8568.jpg 'Page scaffolding')
+Proyecto final General Assembly.
 
-Mi idea fue crear una aplicación donde se pudiera descargar datos de una [API publica](https://www.weatherbit.io/),
-una aplicación de datos meteorológicos donde pudiera localizar una ciudad y mostrar la temperaturatura.
-Esta aplicación ha sido hecha en [React](https://es.reactjs.org/) , instalando una libreria llamada [MapBox](https://www.mapbox.com/)
-para visualizar la posición en el mapa.
-Para cumplir los requerimientos del proyecto he tenido que componetizar el código en partes y hacer un test.
-Tuve que instalar otra librería llamada [jets](https://jestjs.io/es-ES/) para pasar un test y demostrar que sabemos hacerlo.
-También es parte de los requerimientos es desplegar el proyecto en [Netlify](https://www.netlify.com/)
-para ello hay que compilar en una carpeta y después hacer el despliegue.
-Componetizando las partes del proyecto de acuerdo con los requerimientos del mismo.
+API weatherbit.com & Mapbox
+
+Mi idea fue crear una Aplicación que descargara datos de una [API pública](https://www.weatherbit.io/),
+datos meteorológicos en formato JSON, que después de obtenerlos los renderizaría en pantalla.
+A las 2 semanas de empezar con ello y habiendo cumplido los requerimientos del proyecto, instalé una librería [MapBox](https://www.mapbox.com/) para poder ver sobre el mapa donde están situada la ciudad elegida.
+
+Esta aplicación ha sido hecha en [React](https://es.reactjs.org/), para cumplir los requerimientos del proyecto he tenido que componetizar el código en partes y hacer test unitarios. Instalé otra librería llamada [jets](https://jestjs.io/es-ES/) para pasar un test unitario.
+También es parte de los requerimientos es desplegar el proyecto en [Netlify](https://www.netlify.com/) y que este accesible para todos los publicos tanto en **githug** como en **Netlify**
+para ello hay que compilar en una carpeta [Build] y después hacer el despliegue.
+Empece el proyecto haciendo un boceto en papel muy sencillo que poco a poco ha ido tomando forma y transformándose.
+
+![Page Scaffolding](/info/assets/boceto.jpg 'Page scaffolding')
+
+
+Los principales retos a los que me enfrente fueros el desconocimiento de [React] y de todo el funcionamiento de su escalfolding, obtener la data de la **API publica** y renderizarla en pantalla, después hacer que apareciera un icono 
+para representar gráficamente el tiempo de la ciudad para así dar más información de ella y el último lugar lo más complicado fue implementar **MapBox** y pasar las coordenadas de Longitud y latitud en el mapa y que mostrase la ciudad en el mismo.
+
+También ha sido determinante importar los **Hooks** para que todo funcione bien y sé que se pueda componetizar todo.
+He aprendido también que los **Test** son una parte muy importante de las aplicaciones en la que nos aseguramos de que todo funciona bien y no hay fallos.
+He aprendido que la aplicación en la que he desplegado el proyecto **Netlify** es muy exigente, y que lo que funciona en local no tiene por qué funcionar al desplegarlo.
+
+Aunque he cumplido los requerimientos del proyecto, quedan algunos puntos que tengo que abordar a partir de ahora, como los test, que auque tenemos un test unitario bastante simple funcionando en la aplicación, todavía no comprendo bien como hacer test a otras partes de la aplicación y también me queda en el tintero componetizar el elemento del mapa que aunque en local si lo he componetizado en **Netlify** todavía no, ya que al desplegar la aplicación no consigo ver el mapa en el momento de la exposición.
+
+Este proyecto fue presentado ante los compañeros y maestros de General Assembly el día 25 de Julio de 2022.
+Mi agradecimiento a todos los compañeros y agradecer a Los maestros Alex y Gabriel la cantidad de preguntas que me aclararon y personalmente a **Pedro Martin** por su implicación y explicaciones de la materia todos los días.
+A partir de ahora iré mejorándolo con lo que es posible que en algún momento no ser pueda ver por diferentes motivos.
+
+WEB: https://alvaro-es-deployment-demo.netlify.app/
+
+
 El resultado es el siguiente,
 
 ![Page Scaffolding](/info/assets/Readme_foto1.PNG 'Page scaffolding')
-
-Los mayores dolores de cabeza y problemas que he tenido al realizar este proyecto y que he ido superando son, obtener data mediante el fech, ya que he tenido que leer el manual de la API pública y componetizar en partes por requerimiento del proyecto, quise meter en un componente todo lo referente a la librería de Mapbox y me llevo mucho tiempo pero al final lo resolví. Básicamente entender la manera de trabajar en React es el reto más grande que he encontrado y el funcionamiento de los test
-
 
 
 
