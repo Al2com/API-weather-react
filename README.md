@@ -1,6 +1,6 @@
 Proyecto final General Assembly.
 
-API weatherbit.com & Mapbox
+API weatherbit.com & Mapbox.
 
 Mi idea fue crear una Aplicación que descargara datos de una [API pública](https://www.weatherbit.io/),
 datos meteorológicos en formato JSON, que después de obtenerlos los renderizaría en pantalla.
