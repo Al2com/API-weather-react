@@ -27,7 +27,7 @@ Este proyecto fue presentado ante los compañeros y maestros de General Assembly
 Mi agradecimiento a todos los compañeros y agradecer a Los maestros Alex y Gabriel la cantidad de preguntas que me aclararon y personalmente a **Pedro Martin** por su implicación y explicaciones de la materia todos los días.
 A partir de ahora iré mejorándolo con lo que es posible que en algún momento no ser pueda ver por diferentes motivos.
 
-WEB: https://alvaro-es-deployment-demo.netlify.app/
+WEB: https://al2com-makes-great-sites.netlify.app/
 
 
 El resultado es el siguiente,
