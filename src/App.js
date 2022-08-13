@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 import Main from './components/Main';
 import Map from "./components/Map";
 import mapboxgl from 'mapbox-gl'; 
-
+//probando con manjaro
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoiYXBpcHJveWVjdG8iLCJhIjoiY2w1aXNxcnlxMDhkcjNjbXhmaWhvN2hqbCJ9.0aI6_p6aaifHHsaCowhM5A';
