@@ -2,9 +2,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Main from './components/Main';
-import Map from "./components/Map";
-import mapboxgl from 'mapbox-gl'; 
-//probando con manjaro
+import Map from './components/Map';
+import mapboxgl from 'mapbox-gl';
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoiYXBpcHJveWVjdG8iLCJhIjoiY2w1aXNxcnlxMDhkcjNjbXhmaWhvN2hqbCJ9.0aI6_p6aaifHHsaCowhM5A';
@@ -19,7 +18,6 @@ async function getData(search) {
     return datos;
   } catch (error) {
     console.error('error');
-   
   }
 }
 function App() {
@@ -53,11 +51,11 @@ function App() {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/mapbox/streets-v11",
+      style: 'mapbox://styles/mapbox/streets-v11',
       center: [lng, lat],
-      zoom: zoom,//el comentario es para que no salte el warning
-    }); // eslint-disable-next-line react-hooks/exhaustive-deps 
-  }, [lng]); 
+      zoom: zoom, //el comentario es para que no salte el warning
+    }); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lng]);
 
   return (
     <>
@@ -70,8 +68,5 @@ function App() {
     </>
   );
 }
-  
-    
+
 export default App;
-
-
